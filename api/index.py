@@ -2,6 +2,6 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-@app.get("/api/python")
+@app.get("/api/healthcheck")
 def hello_world():
-    return {"message": "Hello World"}
+    return {"message": "Healthcheck is working fine"}
