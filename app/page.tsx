@@ -17,15 +17,16 @@ const HomePage: React.FC = () => {
         },
         body: JSON.stringify({ url }),
       });
-
+      console.log(res)
       if (!res.ok) {
         throw new Error(`HTTP error! status: ${res.status}`);
       }
 
       const data = await res.json();
       setResponse(data);
+      console.log(data)
     } catch (error) {
-      console.error('Error scraping the URL:', error);
+      console.log('Error scraping the URL:', error);
     }
   };
 
