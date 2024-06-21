@@ -19,6 +19,7 @@ const HomePage: React.FC = () => {
       });
       console.log(res)
       if (!res.ok) {
+        console.log(res)
         throw new Error(`HTTP error! status: ${res.status}`);
       }
 
